@@ -1,11 +1,23 @@
-# Node Express API
+# Node Express REST API
+
+## Running
+
+1. `npm install`
+
+1. `npm run seed`, to create a database in `database.sqlite3`.
+
+1. `npm start`.
 
 
+## Specification
 
-💫 Welcome! 🎉
+- Server : [nodemon](https://nodemon.io/)
 
+- Database : SQLite
 
-This repo involves building a Node.js/Express.js app that will serve a REST API.
+- ORM : [Sequelize](http://docs.sequelizejs.com/)
+
+- Middleware: `getProfile`
 
 ## Data Models
 
@@ -21,29 +33,6 @@ Contracts group jobs within them.
 
 ### Job
 contractor get paid for jobs by clients under a certain contract.
-
-## Getting Set Up
-
-
-Install the LTS version of [Node.js](https://nodejs.org/en/).
-
-1. Clone this repository.
-
-1. In the repo root directory, run `npm install` to gather all dependencies.
-
-1. Next, `npm run seed` will seed the local SQLite database. **Warning: This will drop the database if it exists**. The database lives in a local file `database.sqlite3`.
-
-1. Then run `npm start` which should start the server.
-
-
-## Technical Notes
-
-- The server is running with [nodemon](https://nodemon.io/) which will automatically restart for you when you modify and save a file.
-
-- The database provider is SQLite, which will store data in a file local to your repository called `database.sqlite3`. The ORM [Sequelize](http://docs.sequelizejs.com/) is on top of it.
-
-- This API uses the `getProfile` middleware that is located under `src/middleware/getProfile.js` to authenticate users. users are authenticated by passing `profile_id` in the request header. after a user is authenticated his profile will be available under `req.profile`. make sure only users that are on the contract can access their contracts.
-- The server is running on port 3001.
 
 ## APIs 
 
@@ -81,5 +70,3 @@ Below is a list of the API's for the application.
     }
 ]
 ```
-
-That's all :)
