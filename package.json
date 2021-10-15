@@ -1,0 +1,39 @@
+{
+  "name": "node-express-api",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "4.17.1",
+    "sequelize": "^6.3.4",
+    "sqlite3": "^4.0.1",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "seed": "node ./scripts/runSeed.js",
+    "test": "node ./scripts/runSeed.js && nyc mocha",
+    "update-doc": "node ./scripts/swaggerDef.js > swagger-spec.json",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js ./"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "concurrently": "4.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.2.0",
+    "nodemon": "1.19.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
+    "supertest": "^5.0.0",
+    "swagger-jsdoc": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=10.16.3"
+  },
+  "engineStrict": true
+}

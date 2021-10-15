@@ -1,0 +1,5 @@
+/node_modules
+*.sqlite3
+todo.md
+/.nyc_output
+.DS_Store
